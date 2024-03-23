@@ -29,29 +29,12 @@ const Sidebar = () => {
     <div className="sidebar-container">
       <nav className={`sidebar ${sidebarVisible ? 'active' : ''}`}>
         <ul className="sidebar-list">
+          {/* Link to Home page */}
           <li>
-            <img src={logos.homepage} alt="Homepage" />
-            Homepage
-          </li>
-          <li>
-            <img src={logos.profile} alt="Profile" />
-            Profile
-          </li>
-          <li>
-            <img src={logos.users} alt="Users" />
-            Users
-          </li>
-          <li>
-            <img src={logos.products} alt="Products" />
-            Products
-          </li>
-          <li>
-            <img src={logos.posts} alt="Posts" />
-            Posts
-          </li>
-          <li>
-            <img src={logos.notes} alt="Notes" />
-            Notes
+            <Link to="/home">
+              <img src={logos.homepage} alt="" />
+              Home
+            </Link>
           </li>
           {/* Link to Calendar page */}
           <li>
@@ -66,14 +49,6 @@ const Sidebar = () => {
               <img src={logos.contactus} alt="" />
               Contact Us
             </Link>
-          </li>
-          <li>
-            <img src={logos.settings} alt="Settings" />
-            Settings
-          </li>
-          <li>
-            <img src={logos.contactus} alt="Contact Us" />
-            Charts
           </li>
           <li>
             <img src={logos.logout} alt="Log Out" />
