@@ -60,7 +60,7 @@ const Sidebar = () => {
           Settings
         </li>
         <li>
-          <img src={logos.charts} alt="Charts" />
+          <img src={logos.contactus} alt="Contact Us" />
           Charts
         </li>
         <li>
