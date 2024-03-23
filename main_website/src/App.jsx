@@ -4,21 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Sidebar from './components/sidebar'
 import ContactUs from './components/contactus'
+import Calendar from './components/Calendar'
 
 function App() {
 
   return (
     <>
+
     <Sidebar>
 
     </Sidebar>
-    <ContactUs>
-
-    </ContactUs>
     
+    <Calendar>
 
-
-
+    </Calendar>
     </>
   )
 }

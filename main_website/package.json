@@ -11,9 +11,20 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/react": "^6.1.11",
+    "@fullcalendar/timegrid": "^6.1.11",
     "@syncfusion/ej2-data": "^25.1.35",
+    "@syncfusion/ej2-react-buttons": "^25.1.35",
+    "@syncfusion/ej2-react-calendars": "^25.1.35",
+    "@syncfusion/ej2-react-dropdowns": "^25.1.35",
+    "@syncfusion/ej2-react-inputs": "^25.1.35",
+    "@syncfusion/ej2-react-navigations": "^25.1.35",
     "@syncfusion/ej2-react-schedule": "^25.1.35",
+    "@syncfusion/ej2-react-splitbuttons": "^25.1.35",
     "emailjs-com": "^3.2.0",
+    "fullcalendar": "^6.1.11",
+    "moment-timezone": "^0.5.45",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -25,6 +36,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "tailwindcss": "^3.4.1",
     "vite": "^5.2.0"
   }
 }
