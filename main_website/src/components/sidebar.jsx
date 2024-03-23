@@ -1,4 +1,7 @@
+// sidebar.jsx
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import './sidebar.css';
 
 // Sample logo URLs
@@ -24,54 +27,63 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar-container">
-    <nav className={`sidebar ${sidebarVisible ? 'active' : ''}`}>
-      <ul className="sidebar-list">
-    
-        <li>
-          <img src={logos.homepage} alt="Homepage" />
-          Homepage
-        </li>
-        <li>
-          <img src={logos.profile} alt="Profile" />
-          Profile
-        </li>
-        <li>
-          <img src={logos.users} alt="Users" />
-          Users
-        </li>
-        <li>
-          <img src={logos.products} alt="Products" />
-          Products
-        </li>
-        <li>
-          <img src={logos.posts} alt="Posts" />
-          Posts
-        </li>
-        <li>
-          <img src={logos.notes} alt="Notes" />
-          Notes
-        </li>
-        <li>
-          <img src={logos.calendar} alt="Calendar" />
-          Calendar
-        </li>
-        <li>
-          <img src={logos.settings} alt="Settings" />
-          Settings
-        </li>
-        <li>
-          <img src={logos.contactus} alt="Contact Us" />
-          Charts
-        </li>
-        <li>
-        <img src={logos.logout} alt="Log Out" />
-          log out
-        </li>
-      </ul>
-    </nav>
-    <button className="hamburger-toggle" onClick={toggleSidebar}>
-    <img className="hamburger-icon" src="https://cdn-icons-png.flaticon.com/512/12127/12127259.png"  />
-  </button>
+      <nav className={`sidebar ${sidebarVisible ? 'active' : ''}`}>
+        <ul className="sidebar-list">
+          <li>
+            <img src={logos.homepage} alt="Homepage" />
+            Homepage
+          </li>
+          <li>
+            <img src={logos.profile} alt="Profile" />
+            Profile
+          </li>
+          <li>
+            <img src={logos.users} alt="Users" />
+            Users
+          </li>
+          <li>
+            <img src={logos.products} alt="Products" />
+            Products
+          </li>
+          <li>
+            <img src={logos.posts} alt="Posts" />
+            Posts
+          </li>
+          <li>
+            <img src={logos.notes} alt="Notes" />
+            Notes
+          </li>
+          {/* Link to Calendar page */}
+          <li>
+            <Link to="/calendar">
+              <img src={logos.calendar} alt="" />
+              Calendar
+            </Link>
+          </li>
+          {/* Link to Contact Us page */}
+          <li>
+            <Link to="/contact">
+              <img src={logos.contactus} alt="" />
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <img src={logos.settings} alt="Settings" />
+            Settings
+          </li>
+          <li>
+            <img src={logos.contactus} alt="Contact Us" />
+            Charts
+          </li>
+          <li>
+            <img src={logos.logout} alt="Log Out" />
+            log out
+          </li>
+        </ul>
+      </nav>
+      <button className="hamburger-toggle" onClick={toggleSidebar}>
+        <img className="hamburger-icon" src="https://cdn-icons-png.flaticon.com/512/12127/12127259.png" alt="Menu" />
+      </button>
     </div>
   );
 };

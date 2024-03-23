@@ -1,25 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Sidebar from './components/sidebar'
-import ContactUs from './components/contactus'
-import Calendar from './components/Calendar'
+// App.jsx
+
+import React from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Sidebar from './components/sidebar';
+import Calendar from './components/Calendar';
+import ContactForm from './components/contactus';
 
 function App() {
-
   return (
-    <>
-
-    <Sidebar>
-
-    </Sidebar>
-    
-    <Calendar>
-
-    </Calendar>
-    </>
-  )
+    <BrowserRouter>
+      <div>
+        <Sidebar />
+        <Routes>
+          <Route path="/calendar" element={<Calendar/>} />
+          <Route path="/contact" element={<ContactForm/>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

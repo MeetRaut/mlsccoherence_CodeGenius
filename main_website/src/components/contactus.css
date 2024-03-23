@@ -1,11 +1,45 @@
 /* ContactForm.css */
+
+
+
+.contact-form {
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;*/
+
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
 .contact-form-container {
-  width: 500px; /* Increased from 500px to 800px */
+  /* width: 500px; /* Increased from 500px to 800px 
   margin: auto;
-  padding: 40px; /* Increased padding for a larger container */
+  padding: 40px; /* Increased padding for a larger container 
   background-color: #f0f0f0;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+  width: 600px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 
 .contact-form h2 {
@@ -18,19 +52,22 @@
   margin-bottom: 20px; /* Increased margin-bottom for larger spacing between fields */
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
 .contact-form textarea {
-  width: 100%;
-  padding: 15px; /* Increased padding for a larger feel */
+  width: 90%;
+  margin-left: 5%;
+  padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-bottom: 20px; /* Increased margin-bottom for larger spacing between fields */
+  margin-bottom: 20px;
 }
 
+
+
 .contact-form textarea {
-  height: 150px; /* Increased height for a larger textarea */
+  height: 100px; /* Increased height for a larger textarea */
   resize: vertical;
 }
 
