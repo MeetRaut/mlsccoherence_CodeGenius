@@ -31,7 +31,7 @@ const Sidebar = () => {
         <ul className="sidebar-list">
           {/* Link to Home page */}
           <li>
-            <Link to="/home">
+            <Link to="/">
               <img src={logos.homepage} alt="" />
               Home
             </Link>

@@ -15,14 +15,7 @@ export default class CardList extends Component {
         flexWrap={{ lg: "nowrap" }}
         justifyContent={"center"}
       >
-        <Grid md={3}>
-          <SingleCard
-            
-            
-            
-            
-          ></SingleCard>
-        </Grid>
+        
         <Grid md={3}>
           <SingleCard
             
@@ -30,23 +23,11 @@ export default class CardList extends Component {
         </Grid>
         <Grid md={3}>
           <SingleCard
-            socialLogo={
-              <InstagramIcon
-                //   color={"secondary"}
-                fontSize="medium"
-                sx={{
-                  color: "var(--instagram-middle)",
-                }}
-              />
-            }
+            
             
           ></SingleCard>
         </Grid>
-        <Grid md={3}>
-          <SingleCard
-            
-          ></SingleCard>
-        </Grid>
+        
       </Grid>
     );
   }
