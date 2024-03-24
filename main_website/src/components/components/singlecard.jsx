@@ -5,8 +5,65 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Icon, Grid } from "@mui/material";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS } from 'chart.js/auto'
+import { Chart }            from 'react-chartjs-2'
+import usersData from "./package.json"; // Import the users.json data
+
+const options = {
+  maintainAspectRatio: false,
+  responsive: true,
+  scales: {
+    x: {
+      display: true, // Display x-axis
+      grid: {
+        display: false, // Hide x-axis grid lines
+      },
+    },
+    y: {
+      ticks: {
+        display: true, // Display y-axis labels
+      },
+      grid: {
+        display: true, // Display y-axis grid lines
+      },
+      beginAtZero: true,
+    },
+  },
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: false,
+      text: 'Bar Chart',
+    },
+  },
+};
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+const datasets = [
+  {
+    label: 'Trend Graph',
+    data: [10, 50, 40, 20, 80, 90, 35],
+    backgroundColor: '#5e72e4',
+    borderRadius: 10,
+  },
+];
+
+const data = {
+  labels,
+  datasets,
+};
+
+const containerStyle = {
+  background: '#18214d',
+  height: '500px', // Set the height to 100px
+  margin: '10px 20px',
+  borderRadius: '25px',
+};
+
 const SingleCard = ({
   socialLogo,
   socialName,
@@ -67,7 +124,6 @@ const SingleCard = ({
               fontSize={"14px"}
               letterSpacing={"5px"}
             >
-              Followers
             </Typography>
           </Typography>
           <Typography variant="body2">
@@ -77,10 +133,6 @@ const SingleCard = ({
                 fontSize={14}
                 fontWeight={700}
               >
-                <Grid container justifyContent={"center"} alignItems={"center"}>
-                  <ArrowDropUpIcon />
-                  {followersToday[1]} Today
-                </Grid>
               </Typography>
             ) : (
               <Typography
@@ -89,8 +141,9 @@ const SingleCard = ({
                 fontWeight={700}
               >
                 <Grid container justifyContent={"center"} alignItems={"center"}>
-                  <ArrowDropDownIcon />
-                  {followersToday[1]} Today
+                <div className="flex justify-center items-center w-full p-2 pb-2" style={{ ...containerStyle, height: '270px' }}>
+                <Bar options={options} data={data} />
+                </div>
                 </Grid>
               </Typography>
             )}
@@ -102,10 +155,8 @@ const SingleCard = ({
 };
 export default SingleCard;
 SingleCard.defaultProps = {
-  socialLogo: "loading...",
-  socialName: "loading...",
-  followers: "loading...",
-  followersToday: "loading...",
+  followers: "TRENDS",
+  followersToday: "",
 };
 
 SingleCard.propTypes = {
